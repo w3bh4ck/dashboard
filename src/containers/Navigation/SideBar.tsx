@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { navData } from "../../utils/mocks/mock";
-import { Icon } from "../../components/Icons";
+import { Icon } from "../../components/Common/Icons";
 import { Link, useLocation } from "react-router-dom";
 
 const SideBar = () => {
