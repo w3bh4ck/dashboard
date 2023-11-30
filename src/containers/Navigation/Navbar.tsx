@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Icon } from "../../components/Icons";
+import { Icon } from "../../components/Common/Icons";
 
 const Navbar = () => {
   return (
