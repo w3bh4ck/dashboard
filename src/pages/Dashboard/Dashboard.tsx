@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import PageWrapper from "../../containers/PageWrapper/PageWrapper";
+import DashboardCard from "../../components/Cards/DashboardCard";
 
 const Dashboard = () => {
   return (
@@ -11,45 +12,25 @@ const Dashboard = () => {
             <div className="date">Today's sales</div>
             <div className="amount">₦1,652.50</div>
           </div>
-          <div className="sales-card inverse">
-            <div className="date">24 Aug - 01 Sep 21</div>
-            <div className="chart">
-              <img
-                src="/assets/chart1.png"
-                alt="chart"
-                height={69}
-                width={201}
-              />
-            </div>
-            <div className="date">This week</div>
-            <div className="amount">₦1,652.50</div>
-          </div>
-          <div className="sales-card ">
-            <div className="date">24 Aug - 01 Sep 21</div>
-            <div className="chart">
-              <img
-                src="/assets/chart1.png"
-                alt="chart"
-                height={69}
-                width={201}
-              />
-            </div>
-            <div className="date">This Month</div>
-            <div className="amount">₦1,652.50</div>
-          </div>
-          <div className="sales-card ">
-            <div className="date">24 Aug - 01 Sep 21</div>
-            <div className="chart">
-              <img
-                src="/assets/chart1.png"
-                alt="chart"
-                height={69}
-                width={201}
-              />
-            </div>
-            <div className="date">Last Month</div>
-            <div className="amount">₦1,652.50</div>
-          </div>
+          <DashboardCard
+            chart="chart1"
+            filter="This Week"
+            duration="24 Aug - 01 Sep 21"
+            amount="1,652.50"
+            inverse
+          />
+          <DashboardCard
+            chart="chart2"
+            filter="This Month"
+            duration="24 Aug - 01 Sep 21"
+            amount="1,652.50"
+          />
+          <DashboardCard
+            chart="chart3"
+            filter="Last Month"
+            duration="24 Aug - 01 Sep 21"
+            amount="1,652.50"
+          />
         </div>
       </StyledMain>
     </PageWrapper>
@@ -79,6 +60,7 @@ const StyledMain = styled.main`
   .grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
   }
 
   .sales-card {
@@ -94,11 +76,6 @@ const StyledMain = styled.main`
     color: #ffffff;
   }
 
-  .chart {
-    padding-top: 25px;
-    display: flex;
-    justify-content: center;
-  }
   .amount {
     font-size: 20px;
     font-weight: 600;

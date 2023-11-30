@@ -3,7 +3,14 @@ import { router } from "./router/Router";
 
 function App() {
   return (
-    <div>
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        backgroundColor: "#000",
+      }}
+    >
       <RouterProvider router={router} />
     </div>
   );
