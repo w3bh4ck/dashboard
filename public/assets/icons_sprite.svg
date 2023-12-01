@@ -163,5 +163,23 @@
       stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
 
+  <symbol id='search' viewBox="0 0 24 25" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10.5" cy="10.3235" r="6.5" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" />
+    <path d="M15.5 15.8235L21 21.8235" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id='filter' width="16" height="16" viewBox="0 0 16 16" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 8H12" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" />
+    <path d="M6.66675 11.3333H9.33341" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" />
+    <path d="M2 4.66667H14" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
+
 
 </svg>
