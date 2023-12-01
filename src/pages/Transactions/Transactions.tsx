@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import PageWrapper from "../../containers/PageWrapper/PageWrapper";
 import { Icon } from "../../components/Common/Icons";
+import TransactionTable from "../../containers/Tables/TransactionTable";
 
 const Transactions = () => {
   return (
@@ -15,13 +16,14 @@ const Transactions = () => {
             <Icon svg="search" />
           </StyledInput>
           <div className="filter">
-            <StyledButton>
+            <StyledButton type="button">
               Filter
               <Icon svg="filter" />
             </StyledButton>
             <StyledButton>Export</StyledButton>
           </div>
         </div>
+        <TransactionTable />
       </StyledMain>
     </PageWrapper>
   );
@@ -41,7 +43,8 @@ const StyledMain = styled.div`
   .table-actions {
     display: flex;
     justify-content: space-between;
-    padding: 20px 10px 20px 10px;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid #f0f0f0;
   }
   .page-title {
     color: #1a1a1a;
@@ -80,6 +83,7 @@ const StyledInput = styled.div`
 const StyledButton = styled.button`
   height: 40px;
   width: 94px;
+  cursor: pointer;
   border-radius: 8px;
   border: 1px solid #0a0a0a;
   background-color: #fff;
