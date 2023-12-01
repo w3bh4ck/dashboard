@@ -35,7 +35,6 @@ const Dashboard = () => {
           />
         </div>
 
-        {/* Dashboard report */}
         <StyledDashboardReport>
           <div className="action-section">
             <div className="title">Sales</div>
@@ -185,12 +184,12 @@ const StyledButton = styled.button`
 
 const StyledCta = styled.div`
   width: 280px;
-  height: 284px;
+  height: 275px;
   border-radius: 8px;
   background-image: url("/assets/pattern-bg.png");
   background-size: cover;
   background-position: center;
-  margin-left: 10px;
+  margin-left: 30px;
   & p {
     margin: 20px;
     width: 190px;

@@ -23,5 +23,10 @@ export default PageWrapper;
 
 const StyledWrapper = styled.div`
   display: flex;
+  width: 100%;
   background-color: #ffffff;
+  .main {
+    width: 100vw;
+    padding: 20px;
+  }
 `;
