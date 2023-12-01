@@ -2,6 +2,7 @@ import styled from "styled-components";
 import PageWrapper from "../../containers/PageWrapper/PageWrapper";
 import DashboardCard from "../../components/Cards/DashboardCard";
 import { Icon } from "../../components/Common/Icons";
+import ReportChart from "../../components/Charts/ReportChart";
 
 const Dashboard = () => {
   return (
@@ -61,6 +62,7 @@ const Dashboard = () => {
             </div>
           </div>
         </StyledDashboardReport>
+        <ReportChart />
       </StyledMain>
     </PageWrapper>
   );
