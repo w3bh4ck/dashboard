@@ -62,7 +62,13 @@ const Dashboard = () => {
             </div>
           </div>
         </StyledDashboardReport>
-        <ReportChart />
+        <div className="report">
+          <ReportChart />
+          <StyledCta>
+            <p>KlashaWire - send money to businesses globally from Africa</p>
+            <button>Send Wire</button>
+          </StyledCta>
+        </div>
       </StyledMain>
     </PageWrapper>
   );
@@ -72,6 +78,9 @@ export default Dashboard;
 
 const StyledMain = styled.main`
   padding: 20px;
+  .report {
+    display: flex;
+  }
   .page-title {
     color: #1a1a1a;
     font-size: 20px;
@@ -172,4 +181,32 @@ const StyledButton = styled.button`
   display: flex;
   justify: center;
   padding-top: 11px;
+`;
+
+const StyledCta = styled.div`
+  width: 280px;
+  height: 284px;
+  border-radius: 8px;
+  background-image: url("/assets/pattern-bg.png");
+  background-size: cover;
+  background-position: center;
+  margin-left: 10px;
+  & p {
+    margin: 20px;
+    width: 190px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  & button {
+    margin-top: 50px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 8px;
+    height: 48px;
+    width: 130px;
+    background-color: #000;
+    color: #fff;
+  }
 `;
