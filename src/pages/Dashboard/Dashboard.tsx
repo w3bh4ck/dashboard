@@ -189,7 +189,7 @@ const StyledCta = styled.div`
   background-image: url("/assets/pattern-bg.png");
   background-size: cover;
   background-position: center;
-  margin-left: 30px;
+  margin-left: 20px;
   & p {
     margin: 20px;
     width: 190px;
