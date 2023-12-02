@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import PageWrapper from "../../containers/PageWrapper/PageWrapper";
 import DashboardCard from "../../components/Cards/DashboardCard";
-import { Icon } from "../../components/Common/Icons";
 import ReportChart from "../../components/Charts/ReportChart";
+import Button from "../../components/Common/Button";
+import InputField from "../../components/Common/InputField";
 
 const Dashboard = () => {
   return (
@@ -41,23 +42,24 @@ const Dashboard = () => {
             <div className="days active">7 days</div>
             <div className="days">30 days</div>
             <div>
-              <StyledMenuButton>
-                <span>USD</span>
-                <span>
-                  <Icon className="" svg="down-arrow" />
-                </span>
-              </StyledMenuButton>
+              <Button
+                width="90px"
+                addonPosition="right"
+                label="USD"
+                fontSize="14px"
+                addon="down-arrow"
+              />
             </div>
             <div>
-              <StyledInput>
-                <input placeholder="Email" />
-              </StyledInput>
+              <InputField placeholder="Email" />
             </div>
             <div>
-              <StyledButton>
-                <Icon svg="download-arrow" />
-                Download Report
-              </StyledButton>
+              <Button
+                width="148px"
+                addonPosition="left"
+                label="Download Report"
+                addon="download-arrow"
+              />
             </div>
           </div>
         </StyledDashboardReport>
@@ -142,46 +144,6 @@ const StyledDashboardReport = styled.div`
   }
 `;
 
-const StyledMenuButton = styled.div`
-  display: flex;
-  cursor: pointer;
-  justify-content: center;
-  border-radius: 6px;
-  border: 1px solid #0a0a0a;
-  height: 40px;
-  width: 91px;
-  & span {
-    margin-top: 10px;
-  }
-`;
-
-const StyledInput = styled.div`
-  width: 283px;
-  position: relative;
-  padding-left: 10px;
-  border-radius: 8px;
-  border: 1px solid #f4f4f4;
-  margin-left: 10px;
-  margin-right: 10px;
-  & input {
-    width: 80%;
-    border: none;
-    height: 40px;
-    outline: none;
-  }
-`;
-
-const StyledButton = styled.button`
-  height: 40px;
-  width: 148px;
-  border-radius: 8px;
-  border: 1px solid #0a0a0a;
-  background-color: #fff;
-  display: flex;
-  justify: center;
-  padding-top: 11px;
-`;
-
 const StyledCta = styled.div`
   width: 280px;
   height: 275px;
@@ -189,7 +151,7 @@ const StyledCta = styled.div`
   background-image: url("/assets/pattern-bg.png");
   background-size: cover;
   background-position: center;
-  margin-left: 30px;
+  margin-left: 20px;
   & p {
     margin: 20px;
     width: 190px;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import PageWrapper from "../../containers/PageWrapper/PageWrapper";
-import { Icon } from "../../components/Common/Icons";
 import TransactionTable from "../../containers/Tables/TransactionTable";
+import Button from "../../components/Common/Button";
+import InputField from "../../components/Common/InputField";
 
 const Transactions = () => {
   return (
@@ -11,16 +12,15 @@ const Transactions = () => {
           <span>Transaction history</span>
         </div>
         <div className="table-actions">
-          <StyledInput>
-            <input placeholder="Search" />
-            <Icon svg="search" />
-          </StyledInput>
+          <InputField placeholder="Search" addon="search" />
           <div className="filter">
-            <StyledButton type="button">
-              Filter
-              <Icon svg="filter" />
-            </StyledButton>
-            <StyledButton>Export</StyledButton>
+            <Button
+              label="Filter"
+              addon="filter"
+              addonPosition="right"
+              width="100px"
+            />
+            <Button label="Export" width="94px" />
           </div>
         </div>
         <TransactionTable />
@@ -56,43 +56,5 @@ const StyledMain = styled.div`
     & span {
       padding: 10px;
     }
-  }
-`;
-
-const StyledInput = styled.div`
-  width: 283px;
-  position: relative;
-  padding-left: 10px;
-  border-radius: 8px;
-  border: 1px solid #f4f4f4;
-  margin-left: 10px;
-  margin-right: 10px;
-  & input {
-    width: 86%;
-    border: none;
-    height: 40px;
-    outline: none;
-  }
-
-  & svg {
-    position: absolute;
-    top: 10px;
-  }
-`;
-
-const StyledButton = styled.button`
-  height: 40px;
-  width: 94px;
-  cursor: pointer;
-  border-radius: 8px;
-  border: 1px solid #0a0a0a;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  padding-top: 11px;
-  margin-right: 10px;
-
-  & svg {
-    margin-left: 5px;
   }
 `;
