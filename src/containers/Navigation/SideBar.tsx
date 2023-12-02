@@ -52,7 +52,7 @@ const StyledNavbar = styled.div`
   padding-left: 50px;
   background-color: #fffbf7;
   width: 250px;
-  height: 100vh;
+  height: 100%;
   font-family: "inter";
   .section-header {
     font-size: 16px;

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { transactions } from "../../utils/mocks/mock";
+import TransactionItem from "../../components/Transactions/TransactionItem";
 
 const TransactionTable = () => {
   return (
@@ -17,33 +19,9 @@ const TransactionTable = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>GB124QWERTY12346</td>
-              <td>GTB</td>
-              <td>Mike Owen</td>
-              <td>example@email.com</td>
-              <td>$230.00</td>
-              <td>24.08.2021</td>
-              <td>Pending</td>
-            </tr>
-            <tr className="success">
-              <td>GB124QWERTY12346</td>
-              <td>GTB</td>
-              <td>Mike Owen</td>
-              <td>example@email.com</td>
-              <td>$230.00</td>
-              <td>24.08.2021</td>
-              <td>Successful</td>
-            </tr>
-            <tr>
-              <td>GB124QWERTY12346</td>
-              <td>GTB</td>
-              <td>Mike Owen</td>
-              <td>example@email.com</td>
-              <td>$230.00</td>
-              <td>24.08.2021</td>
-              <td>Successful</td>
-            </tr>
+            {transactions.map((transaction, i) => (
+              <TransactionItem key={`key_${i}`} transaction={transaction} />
+            ))}
           </tbody>
         </StyledTable>
       </div>
