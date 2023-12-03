@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useState } from "react";
 import SideBar from "../Navigation/SideBar";
 import styled from "styled-components";
 import Navbar from "../Navigation/Navbar";
@@ -8,9 +8,16 @@ interface Iprops {
 }
 
 const PageWrapper: FC<Iprops> = ({ children }) => {
+  const [openSidebar, setOpenSideBar] = useState<boolean>(true);
+
+  const onToggleSideBar = () => {
+    console.log("toggle");
+    setOpenSideBar(!openSidebar);
+  };
+
   return (
     <StyledWrapper>
-      <SideBar />
+      <SideBar open={openSidebar} onToggleSideBar={onToggleSideBar} />
       <div className="main">
         <Navbar />
         <div className="content">{children}</div>

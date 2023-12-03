@@ -12,6 +12,8 @@ interface Iprops {
   backgroundColor?: string;
   fontSize?: string;
   type?: "button" | "submit";
+  border?: string;
+  color?: string;
 }
 
 const Button: FC<Iprops> = ({
@@ -22,6 +24,9 @@ const Button: FC<Iprops> = ({
   width,
   backgroundColor,
   fontSize,
+  border,
+  color,
+  onClick,
 }) => {
   return (
     <StyledButton
@@ -29,6 +34,9 @@ const Button: FC<Iprops> = ({
       width={width}
       backgroundColor={backgroundColor}
       fontSize={fontSize}
+      border={border}
+      color={color}
+      onClick={onClick}
     >
       {addonPosition === "left" && <Icon svg={addon ?? ""} />}
       <span className="label">{label}</span>
@@ -45,6 +53,8 @@ interface StyledButtonProps {
   onClick?: () => void;
   backgroundColor?: string;
   fontSize?: string;
+  border?: string;
+  color?: string;
 }
 
 const StyledButton = styled.button<StyledButtonProps>`
@@ -53,13 +63,14 @@ const StyledButton = styled.button<StyledButtonProps>`
   width: ${(props) => props.width};
   cursor: pointer;
   border-radius: 8px;
-  border: 1px solid #0a0a0a;
+  border: ${(props) =>
+    props.border === "none" ? "none" : "1px solid #0a0a0a"};
   background-color: ${(props) => props.backgroundColor || "#fff"};
   display: flex;
   justify-content: center;
   padding-top: 11px;
   margin-right: 10px;
-
+  color: ${(props) => props.color || "#000"};
   & svg {
     margin-left: 5px;
   }
