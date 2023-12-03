@@ -18,7 +18,7 @@ const SideBar: FC<Iprops> = ({ open, onToggleSideBar }) => {
   const location = useLocation();
 
   return (
-    <StyledNavbar open={open}>
+    <StyledSideBar open={open}>
       <div className="logo">
         <img
           src="/assets/klasha-logo.png"
@@ -73,13 +73,13 @@ const SideBar: FC<Iprops> = ({ open, onToggleSideBar }) => {
           />
         </div>
       </div>
-    </StyledNavbar>
+    </StyledSideBar>
   );
 };
 
 export default SideBar;
 
-const StyledNavbar = styled.div<Navprops>`
+const StyledSideBar = styled.div<Navprops>`
   padding-top: 25px;
   margin: 0px;
   padding-right: ${(props) => (props.open ? "30px" : "10px")};
