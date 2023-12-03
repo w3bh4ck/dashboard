@@ -9,6 +9,7 @@ function App() {
         display: "flex",
         justifyContent: "center",
         backgroundColor: "#000",
+        maxWidth: "1480px",
       }}
     >
       <RouterProvider router={router} />

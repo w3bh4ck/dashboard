@@ -28,11 +28,11 @@ const Navbar = () => {
 export default Navbar;
 
 const StyledNavbar = styled.div`
-  width: 100%;
   border-bottom: 1px solid #ededed;
   height: 60px;
   display: flex;
   justify-content: end;
+  background-color: #fff;
   .nav-item {
     margin-right: 25px;
     display: flex;
