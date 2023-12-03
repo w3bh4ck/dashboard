@@ -101,7 +101,7 @@ const StyledMain = styled.main`
   .grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
+    grid-gap: 5px;
   }
 
   .sales-card {

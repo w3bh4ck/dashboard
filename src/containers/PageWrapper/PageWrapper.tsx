@@ -13,7 +13,7 @@ const PageWrapper: FC<Iprops> = ({ children }) => {
       <SideBar />
       <div className="main">
         <Navbar />
-        {children}
+        <div className="content">{children}</div>
       </div>
     </StyledWrapper>
   );
@@ -25,8 +25,14 @@ const StyledWrapper = styled.div`
   display: flex;
   width: 100%;
   background-color: #ffffff;
+  position: relative;
+  min-height: 100vh;
+  .content {
+    padding: 20px;
+    min-height: 100vh;
+  }
   .main {
     width: 100vw;
-    padding: 20px;
+    min-height: 100vh;
   }
 `;
