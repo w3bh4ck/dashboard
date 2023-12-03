@@ -11,7 +11,6 @@ const PageWrapper: FC<Iprops> = ({ children }) => {
   const [openSidebar, setOpenSideBar] = useState<boolean>(true);
 
   const onToggleSideBar = () => {
-    console.log("toggle");
     setOpenSideBar(!openSidebar);
   };
 
